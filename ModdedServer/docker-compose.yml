@@ -2,7 +2,7 @@ version: "3"
 
 services:
   minecraft:
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:java8
     volumes:
       - moddedminecraftdata:/data
       - /home/Minecraft/plugins:/plugins
@@ -28,7 +28,7 @@ services:
       MOTD: "Welcome to the server!"
       # SEED: 8180606777013679325
       # MODE PARAMETERS
-      CF_SERVER_MOD: https://www.curseforge.com/minecraft/modpacks/better-minecraft-modpack/download/3662338/file
+      CF_SERVER_MOD: "https://media.forgecdn.net/files/3662/338/Better+Minecraft+Server+Pack+%5bFORGE%5d+v56.zip"
     tty: true
     stdin_open: true
     restart: unless-stopped
