@@ -31,4 +31,5 @@ services:
     restart: unless-stopped
 
 volumes:
-  moddedminecraftdata: {}
+  moddedminecraftdata:
+    internal: true
