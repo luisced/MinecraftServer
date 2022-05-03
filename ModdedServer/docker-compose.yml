@@ -25,7 +25,7 @@ services:
       OVERRIDE_ICON: "TRUE"
       ICON: "https://cdn.vox-cdn.com/thumbor/8KxJUDwQsz5Qy-_HzZjtCTRR5PU=/0x164:1440x884/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/22310830/NmJgg.jpg"
       MOTD: "Welcome to the server!"
-      CF_SERVER_MOD: https://media.forgecdn.net/files/3771/336/Better+Minecraft+Server+Pack+%5bFORGE%5d+v8.zip
+      GENERIC_PACK: https://media.forgecdn.net/files/3771/336/Better+Minecraft+Server+Pack+%5bFORGE%5d+v8.zip
     tty: true
     stdin_open: true
     restart: unless-stopped
