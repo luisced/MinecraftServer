@@ -2,21 +2,22 @@ version: "3"
 
 services:
   minecraft:
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:java8
     volumes:
       - moddedminecraftdata:/data
+      - ./modpacks:/modpacks:ro
     ports:
       - 25565:25565
     container_name: modded_minecraft_server
     environment:
       EULA: "TRUE"
-      TYPE: "FABRIC"
+      TYPE: CURSEFORGE
       OPS: "LuisGamer02031"
       ENABLE_WHITELIST: "TRUE"
       ENFORCE_WHITELIST: "TRUE"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       SERVER_NAME: "MODDED SERVER"
-      MEMORY: "4G"
+      MEMORY: "6G"
       MODE: "SURVIVAL"
       ONLINE_MODE: "TRUE"
       ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
@@ -24,7 +25,7 @@ services:
       OVERRIDE_ICON: "TRUE"
       ICON: "https://cdn.vox-cdn.com/thumbor/8KxJUDwQsz5Qy-_HzZjtCTRR5PU=/0x164:1440x884/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/22310830/NmJgg.jpg"
       MOTD: "Welcome to the server!"
-      MODPACK: "https://media.forgecdn.net/files/3765/708/Better+Minecraft+Server+Pack+%5bFABRIC%5d+v7.zip"
+      CF_SERVER_MOD: https://media.forgecdn.net/files/3771/336/Better+Minecraft+Server+Pack+%5bFORGE%5d+v8.zip
     tty: true
     stdin_open: true
     restart: unless-stopped
