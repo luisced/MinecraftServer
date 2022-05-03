@@ -25,7 +25,7 @@ services:
       MODPACK: "https://media.forgecdn.net/files/3765/708/Better+Minecraft+Server+Pack+%5bFABRIC%5d+v7.zip"
     volumes:
       - moddedminecraftdata:/data
-        - ./mods:/mods:ro
+      - ./mods:/mods:ro
     tty: true
     stdin_open: true
     restart: unless-stopped
