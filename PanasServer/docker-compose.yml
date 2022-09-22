@@ -1,4 +1,4 @@
-version: "3"
+version: "3.4"
 
 services:
   minecraft:
@@ -35,6 +35,14 @@ services:
     tty: true
     stdin_open: true
     restart: unless-stopped
+  router:
+    image: ${MC_ROUTER_IMAGE:-itzg/mc-router}
+    depends_on:
+      - forge
+      - vanilla
+    ports:
+      - 25566:25565
+    command: --mapping=https://minecraft.luishomeserver.com/=forge:25565
 volumes:
   moddedminecraftserverdata:
     external: true
