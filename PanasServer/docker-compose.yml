@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+    container_name: modded_minecraft_server
+    environment:
+      EULA: "TRUE"
+      TYPE: FORGE
+      FORGEVERSION: 36.2.34
+      VERSION: 1.16.5
+      OPS: "LuisGamer02031"
+      REMOVE_OLD_MODS: "TRUE"
+      ENABLE_WHITELIST: "TRUE"
+      ENFORCE_WHITELIST: "TRUE"
+      OVERRIDE_SERVER_PROPERTIES: "TRUE"
+      SERVER_NAME: "Los Panas"
+      MEMORY: 8G
+      MODE: "SURVIVAL"
+      ONLINE_MODE: "TRUE"
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
+      ALLOW_FLIGHT: "FALSE"
+      ALLOW_CHEATS: "FALSE"
+      WHITELIST: "LuisGamer02031"
+      ALLOW_NETHER: "TRUE"
+      OVERRIDE_ICON: "TRUE"
+      MAX_PLAYERS: 50
+      ICON: "https://cdn.vox-cdn.com/thumbor/8KxJUDwQsz5Qy-_HzZjtCTRR5PU=/0x164:1440x884/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/22310830/NmJgg.jpg"
+      MOTD: "Welcome to Los Panas server!"
+      GENERIC_PACK: "https://www.curseforge.com/minecraft/modpacks/better-mc-modpack/download/3949052/file"
+    volumes:
+      - moddedminecraftserverdata:/data
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+volumes:
+  moddedminecraftserverdata:
+    external: true
