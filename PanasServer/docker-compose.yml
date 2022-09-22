@@ -38,11 +38,10 @@ services:
   router:
     image: ${MC_ROUTER_IMAGE:-itzg/mc-router}
     depends_on:
-      - forge
-      - vanilla
+      - minecraft
     ports:
       - 25566:25565
-    command: --mapping=https://minecraft.luishomeserver.com/=forge:25565
+    command: --mapping=https://minecraft.luishomeserver.com/=minecraft:25565
 volumes:
   moddedminecraftserverdata:
     external: true
