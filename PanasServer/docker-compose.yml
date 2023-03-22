@@ -5,7 +5,7 @@ services:
     image: itzg/minecraft-server:java8
     ports:
       - 25565:25565
-    container_name: modded_minecraft_server_panas
+    container_name: minecraft-server
     environment:
       EULA: "TRUE"
       TYPE: FORGE
@@ -31,7 +31,7 @@ services:
       MOTD: "Welcome to Los Panas server!"
       GENERIC_PACK: "https://mediafiles.forgecdn.net/files/3949/63/Better+MC+Server+Pack+FORGE+1.16.5+v58.5.zip"
     volumes:
-      - moddedminecraftserverdata:/data
+      - mc:/data
     tty: true
     stdin_open: true
     restart: unless-stopped
