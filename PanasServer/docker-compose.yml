@@ -36,6 +36,7 @@ services:
     stdin_open: true
     restart: unless-stopped
   backups:
+    image: itzg/mc-backup
     environment:
       BACKUP_INTERVAL: "2h"
       RCON_HOST: mc
