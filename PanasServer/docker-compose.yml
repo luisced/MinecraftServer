@@ -52,5 +52,4 @@ services:
       - ./mc-backups:/backups
       - ./post-backup.sh:/post-backup.sh:ro
 volumes:
-  mc:
-    external: true
+  mc: {}
