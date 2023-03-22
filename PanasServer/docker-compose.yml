@@ -29,7 +29,7 @@ services:
       REMOVE_OLD_MODS: "FALSE"
       ICON: "https://picandocodigo.net/wp-content/uploads/2008/03/tux.3d.jpg"
       MOTD: "Welcome to Los Panas server!"
-      GENERIC_PACK: "https://mediafiles.forgecdn.net/files/3949/63/Better+MC+Server+Pack+FORGE+1.16.5+v58.5.zip"
+      GENERIC_PACK: "https://doc-0k-0g-docs.googleusercontent.com/docs/securesc/5lvmqil3r703lboacu42n854hui32mqc/qfoj2nrvnm9ssjluo8cefc468tnt7pd1/1679513775000/07943810283407467327/07943810283407467327/1tpcw0N31RHJa1fAqcf-wzaU8cjMjNxqK?e=download&ax=AB85Z1CliZ8LJ2DUqhSZgP9QfE8SuCpDoBPz5jkM0jDdpSsTmRNcf2VMwmbEJrN1XLox4CjoBJGLqoo1jE0KLDRlnkLmTpv1gXoW0q1gJKnKIt5HEDFLX9iO5fcBU9nWavBDIYkoExRzqWZFJcTj-mSt_VeWpCDBcBzE-IbjONG36Ts5yMclAPDCFILD7kcpyql58WH3n-F_qolml7QHTbtTUw5uvNvpy4CTm2O1pw-US6SMA6VBogJ88lyg4M_jocO9rtGGnW3R3kEN8NCMC6KV-FuXNZItfzbgCtQL4FU_Wi0d8xdHVJ77ObceZXWC_JbnnGxd8Yp_9bSYXrPPH0wmrEejLET0J9Y-W155PmxZhHWfvNepsJsPxQdn0tea8_aa301cecsEPPpB4XFMAHyXK42ZblMjOvkxExmNkjf9r2bGKtIunal_f3aeXTmgm7DhGD9_H0STsJZN1q9B_zGdbg_YH_IESXy3hdd0nPV3XmM2NacgsphwsQ5eaWUVs_Dz_GvLpg64MDMZoEb3rxmfQetL0TkTUTcqPPiDzeleD-YQqEZzflA1a1C5dF6CMGPVl0VzyuxusxWRiFrMkf01aO5CzwA6fB23mIH0H45RKst1VSQAaZEEpdIXpmRyrE2-4sldTJPqrMM-yK94OlXEKglbqc-uelZHxgk6FLCDnNhqbsXy9peX3N6wlsBGxgKCI4TMvrLHZAvV-xzVzzvmKDytycXaSGoNp2TsoBxpSYSupiRFEt9U0KywJP8QWPsbl66pUMbsXTfX5PvlHQ_DA8gVK8h_6t3QhHw0qaqlFKZXkPTzIH24ByoPkpAuCxlpElbmHsY7-Fn5S1VifBboTR3YUCiH8118_fBPVG_l-grvREA6NFdUsO8h5ywhYOcwstbkuPiGZ7DQH_f3iCOErZ_eJClK5LsEYt9mgg&uuid=669af954-568e-445f-a169-0bbb8966f419&authuser=0"
     volumes:
       - mc:/data
     tty: true
