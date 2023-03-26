@@ -9,8 +9,8 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: FORGE
-      FORGEVERSION: 36.2.34
-      VERSION: 1.16.5
+      # FORGEVERSION: 36.2.34
+      # VERSION: 1.16.5
       OPS: "LuisGamer02031, "
       ENABLE_WHITELIST: "FALSE"
       ENFORCE_WHITELIST: "TRUE"
@@ -29,7 +29,7 @@ services:
       REMOVE_OLD_MODS: "FALSE"
       ICON: "https://picandocodigo.net/wp-content/uploads/2008/03/tux.3d.jpg"
       MOTD: "Welcome to Los Panas server!"
-      GENERIC_PACK: "https://download1638.mediafire.com/rhlht6lv3xegw_VeCoke6grVI2_InSNmDD8O7sY6FGR4NL39hoY56prVFrjt2r8eiPb2IwBg3-WlR_9HKMqkoaToZqcK/a0trqd5o8aetdkl/BetterMCServer.zip"
+      # GENERIC_PACK: "https://download1638.mediafire.com/rhlht6lv3xegw_VeCoke6grVI2_InSNmDD8O7sY6FGR4NL39hoY56prVFrjt2r8eiPb2IwBg3-WlR_9HKMqkoaToZqcK/a0trqd5o8aetdkl/BetterMCServer.zip"
     volumes:
       - mc:/data
     tty: true
