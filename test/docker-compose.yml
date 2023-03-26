@@ -7,7 +7,7 @@ services:
           - mc:/data
     ports:
       - 25565:25565
-    container_name: minecraft_server
+    container_name: minecraft-server
     environment:
       EULA: "TRUE"
       TYPE: "PAPER"
