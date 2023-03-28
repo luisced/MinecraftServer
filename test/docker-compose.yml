@@ -6,7 +6,7 @@ services:
     volumes:
       - mc:/data
     ports:
-      - 25555:25555
+      - 25565:25565
     container_name: minecraft-server
     environment:
       EULA: "TRUE"
