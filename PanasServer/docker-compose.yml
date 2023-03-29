@@ -51,5 +51,13 @@ services:
       # to external/cloud storage
       - ./mc-backups:/backups
       - ./post-backup.sh:/post-backup.sh:ro
+  web-client:
+    image: nginx
+    ports:
+      - 25555:80
+    volumes:
+      - ./web:/usr/share/nginx/html
 volumes:
   mc: {}
+
+
