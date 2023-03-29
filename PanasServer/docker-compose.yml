@@ -59,6 +59,7 @@ services:
       - ./web:/usr/share/nginx/html
 volumes:
   mc: {}
+  web: {}
   
 
 
