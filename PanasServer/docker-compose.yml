@@ -29,7 +29,7 @@ services:
       REMOVE_OLD_MODS: "FALSE"
       ICON: "https://picandocodigo.net/wp-content/uploads/2008/03/tux.3d.jpg"
       MOTD: "Welcome to Los Panas server!"
-      GENERIC_PACK: "https://download1472.mediafire.com/ihmwqvrg86xg0G8CxGiWzcYepfrxg7RIEZ6rs8wuPqSB_nxYqDPncygCVKUexSoOwGsE4RO18Z3lRyEQ11ck4cX6jGw4/49l3wmnm48oqqi2/BetterMCServer.zip"
+      GENERIC_PACK: "https://download2300.mediafire.com/bvd1fak34k3gVbbvrVpuSCLjl0zTFXLa-dpg1lPbzFLlJia_9t2Vj8kyIpjPZSDPn8oRL_q050ByiSctYxxNbAUXtVvRQw/96voxsbpcotmv7g/BetterMCServer.zip"
     volumes:
       - mc:/data
     tty: true
