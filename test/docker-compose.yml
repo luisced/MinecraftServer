@@ -1,28 +1,9 @@
 version: "3"
 
 services:
-  minecraft:
-    image: itzg/minecraft-server
-    volumes:
-      - mc:/data
+  web-client:
+    image: nginx
     ports:
-      - 25565:25565
-    container_name: minecraft-server
-    environment:
-      EULA: "TRUE"
-      TYPE: "PAPER"
-      OPS: "LuisGamer02031"
-      ENABLE_WHITELIST: "TRUE"
-      ENFORCE_WHITELIST: "TRUE"
-      OVERRIDE_SERVER_PROPERTIES: "TRUE"
-      MEMORY: "4G"
-      MODE: "SURVIVAL"
-      ONLINE_MODE: "TRUE"
-      ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
-      ALLOW_NETHER: "TRUE"
-      OVERRIDE_ICON: "TRUE"
-    tty: true
-    stdin_open: true
-    restart: unless-stopped
-volumes:
-  mc: {}
+      - 25555:80
+    volumes:
+      - ./web:/usr/share/nginx/html
