@@ -56,7 +56,7 @@ services:
     ports:
       - 25555:80
     volumes:
-      - ./web:/etc/nginx/web
+      - ./web:/etc/nginx/html
     environment:
       - NGINX_HOST=foobar.com
       - NGINX_PORT=80
