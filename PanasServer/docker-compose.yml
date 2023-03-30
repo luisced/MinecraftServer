@@ -12,8 +12,6 @@ services:
       FORGEVERSION: 36.2.39
       VERSION: 1.16.5
       OPS: "LuisGamer02031, "
-      ENABLE_WHITELIST: "FALSE"
-      ENFORCE_WHITELIST: "FALSE"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       SERVER_NAME: "Los Panas"
       MEMORY: 16G
@@ -22,7 +20,6 @@ services:
       ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
       ALLOW_FLIGHT: "TRUE"
       ALLOW_CHEATS: "FALSE"
-      WHITELIST: "LuisGamer02031"
       ALLOW_NETHER: "TRUE"
       OVERRIDE_ICON: "TRUE"
       MAX_PLAYERS: 50
@@ -51,7 +48,6 @@ services:
       # to external/cloud storage
       - ./mc-backups:/backups
       - ./post-backup.sh:/post-backup.sh:ro
-
 
 volumes:
   mc: {}
