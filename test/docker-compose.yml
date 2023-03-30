@@ -3,7 +3,7 @@ services:
   web:
     build: .
     ports:
-      - "80:80"
+      - "25555:80"
     volumes:
       - "./web:/usr/share/nginx/html"
     restart: always
