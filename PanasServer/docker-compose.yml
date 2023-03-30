@@ -51,14 +51,7 @@ services:
       # to external/cloud storage
       - ./mc-backups:/backups
       - ./post-backup.sh:/post-backup.sh:ro
-  web:
-    build: .
-    ports:
-      - "25555:80"
-    volumes:
-      - "./web:/usr/share/nginx/html"
-    restart: always
+
 
 volumes:
   mc: {}
-  web: {}
