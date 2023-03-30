@@ -13,7 +13,7 @@ services:
       VERSION: 1.16.5
       OPS: "LuisGamer02031, "
       ENABLE_WHITELIST: "FALSE"
-      ENFORCE_WHITELIST: "TRUE"
+      ENFORCE_WHITELIST: "FALSE"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       SERVER_NAME: "Los Panas"
       MEMORY: 16G
@@ -60,7 +60,3 @@ services:
 volumes:
   mc: {}
   web: {}
-  
-
-
-
