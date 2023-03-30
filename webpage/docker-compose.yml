@@ -1,6 +1,7 @@
 version: "3"
 services:
   web:
+    container_name: mc-webpage
     image: nginx:latest
     ports:
       - "25555:80"
