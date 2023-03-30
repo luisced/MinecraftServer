@@ -227,14 +227,6 @@ body {
 	margin-top: 4%;
 }
 
-.codingClubCard {
-	width: 100%;
-	margin: auto;
-	height: 550px;
-	border-radius: 20px;
-
-	background-color: #161617;
-}
 
 .card-img-top {
 	width: 100%;
@@ -245,9 +237,7 @@ body {
 	text-align: left;
 }
 
-.card-text {
-	font-size: 20px;
-}
+
 
 a {
 	text-decoration: none;
@@ -305,65 +295,16 @@ a {
 	background: #184ad6;
 }
 
--webkit-text-size-adjust: 100%;
---lt-color-gray-100: #f8f9fc;
---lt-color-gray-200: #f1f3f9;
---lt-color-gray-300: #dee3ed;
---lt-color-gray-400: #c2c9d6;
---lt-color-gray-500: #8f96a3;
---lt-color-gray-600: #5e636e;
---lt-color-gray-700: #2f3237;
---lt-color-gray-800: #1d1e20;
---lt-color-gray-900: #111213;
---lt-shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
-	0 1px 4px -1px rgba(0, 0, 0, 0.04);
---lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1),
-	0 6px 20px -3px rgba(0, 0, 0, 0.2);
---lt-color-white: #fff !important;
---lt-color-black: #111213 !important;
---lt-color-transparent: rgba(255, 255, 255, 0) !important;
---lt-color-background-light: var(--lt-color-gray-100) !important;
---lt-color-background-default: var(--lt-color-gray-200) !important;
---lt-color-background-dark: var(--lt-color-gray-300) !important;
---lt-color-border-light: var(--lt-color-gray-200) !important;
---lt-color-border-default: var(--lt-color-gray-300) !important;
---lt-color-border-dark: var(--lt-color-gray-400) !important;
---lt-color-text-very-light: var(--lt-color-gray-500) !important;
---lt-color-text-light: var(--lt-color-gray-600) !important;
---lt-color-text-default: var(--lt-color-gray-700) !important;
---lt-color-text-dark: var(--lt-color-gray-800) !important;
---lt-color-overlay-default: #fff !important;
---lt-color-overlay-dark: #fff !important;
---lt-color-overlay-transparent: rgba(0, 0, 0, 0.1) !important;
---lt-shadow-website-overlay: 0 0 7px 0 rgba(0, 0, 0, 0.3) !important;
--webkit-text-fill-color: inherit;
-font-style: normal;
-box-sizing: border-box;
-max-width: 100%;
-height: 48px;
-margin-top: 0px;
-padding-right: 20px;
-padding-left: 20px;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-border-radius: 4px;
-font-family: "Font 1", sans-serif;
-line-height: 12.6px;
-font-weight: 400;
-text-align: center;
-text-decoration: none;
-cursor: pointer;
-font-size: 16px;
--webkit-tap-highlight-color: transparent;
-appearance: none;
-outline: none;
-border: none;
-background: linear-gradient(105.23deg, #01a4ff 33.35%, #01ffc2 115.77%);
-position: relative;
-color: #000000;
-display: flex;
-grid-column-start: span 1;
-grid-column-end: span 1;
-grid-row-start: span 1;
-grid-row-end: span 1;
+@media screen and (max-width: 600px) { /* adjust the max-width to your preferred phone screen size */
+	.btns {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.btn{
+		margin-bottom: 20px;
+	}
+
+}
