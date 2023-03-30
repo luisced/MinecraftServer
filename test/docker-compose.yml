@@ -1,9 +1,9 @@
 version: "3"
-
 services:
-  web-client:
-    image: nginx
+  web:
+    build: .
     ports:
-      - 25555:80
+      - "80:80"
     volumes:
-      - ./:/usr/share/nginx/html
+      - "./web:/usr/share/nginx/html"
+    restart: always
