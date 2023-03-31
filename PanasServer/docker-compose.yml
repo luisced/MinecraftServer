@@ -5,13 +5,14 @@ services:
     image: itzg/minecraft-server:java8
     ports:
       - 25565:25565
+      - 24454:24454
     container_name: minecraft-server
     environment:
       EULA: "TRUE"
       TYPE: FORGE
       FORGEVERSION: 36.2.39
       VERSION: 1.16.5
-      OPS: "LuisGamer02031, "
+      OPS: "LuisGamer02031, ShadyGamer, Detecto"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       SERVER_NAME: "Los Panas"
       MEMORY: 16G
