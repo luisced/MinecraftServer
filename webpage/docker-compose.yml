@@ -9,6 +9,7 @@ services:
       - "./web:/usr/share/nginx/html"
     restart: always
 
-    networks:
-      - nginx_proxy_manager_default
-
+networks:
+  proxy:
+    name: nginx_proxy_manager_default
+    external: true
