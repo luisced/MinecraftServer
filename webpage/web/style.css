@@ -29,6 +29,12 @@ body {
 	color: white;
 }
 
+_::-webkit-full-page-media,
+_:future,
+:root .bg-black {
+	background-color: var(--color-fondo);
+}
+
 .navbar-brand img {
 	max-width: 150px;
 }
