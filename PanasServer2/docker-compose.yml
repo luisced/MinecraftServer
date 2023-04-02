@@ -5,7 +5,7 @@ services:
     image: itzg/minecraft-server:java8
     ports:
       - 24454:24454/udp
-    container_name: minecraft-server
+    container_name: minecraft-server2
     environment:
       EULA: "TRUE"
       TYPE: FORGE
@@ -33,22 +33,6 @@ services:
     tty: true
     stdin_open: true
     restart: unless-stopped
-  backups:
-    image: itzg/mc-backup
-    environment:
-      BACKUP_INTERVAL: "1h"
-      RCON_HOST: mc2
-      PRE_BACKUP_SCRIPT: |
-        echo "Before backup!"
-        echo "Also before backup from $$RCON_HOST to $$DEST_DIR"
-      POST_BACKUP_SCRIPT_FILE: /post-backup.sh
-    volumes:
-      # mount the same volume used by server, but read-only
-      - mc2:/data:ro
-      # use a host attached directory so that it in turn can be backed up
-      # to external/cloud storage
-      - ./mc-backups:/backups
-      - ./post-backup.sh:/post-backup.sh:ro
 
 volumes:
   mc2: {}
