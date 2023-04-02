@@ -15,7 +15,7 @@ services:
       OPS: "LuisGamer02031, ShadyGamer, Detectov"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       SERVER_NAME: "Los Panas"
-      MEMORY: 16G
+      MEMORY: 20G
       MODE: "SURVIVAL"
       ONLINE_MODE: "TRUE"
       ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
