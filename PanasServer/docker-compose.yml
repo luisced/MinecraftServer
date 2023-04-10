@@ -28,7 +28,7 @@ services:
       REMOVE_OLD_MODS: "FALSE"
       ICON: "https://picandocodigo.net/wp-content/uploads/2008/03/tux.3d.jpg"
       MOTD: "§x§d§f§5§d§0§6§nW§x§e§0§5§a§0§f§ne§x§e§1§5§6§1§8§nl§x§e§2§5§3§2§1§nc§x§e§4§5§0§2§a§no§x§e§5§4§c§3§2§nm§x§e§6§4§9§3§b§ne§x§e§7§4§6§4§4§n §x§e§8§4§2§4§d§nt§x§e§9§3§f§5§6§no§x§e§a§3§c§5§f§n §x§e§c§3§8§6§8§nL§x§e§d§3§5§7§1§no§x§e§e§3§2§7§a§ns§x§e§f§2§f§8§3§n §x§f§0§2§b§8§b§nP§x§f§1§2§8§9§4§na§x§f§2§2§5§9§d§nn§x§f§4§2§1§a§6§na§x§f§5§1§e§a§f§ns§x§f§6§1§b§b§8§n §x§f§7§1§7§c§1§nS§x§f§8§1§4§c§a§ne§x§f§9§1§1§d§3§nr§x§f§a§0§d§d§b§nv§x§f§c§0§a§e§4§ne§x§f§d§0§7§e§d§nr§x§f§e§0§3§f§6§n!"
-      GENERIC_PACK: "https://download1512.mediafire.com/710dk5e4cxwgo5kYJGiycyX_U5Nyxhkbg2X6Mjkwi4r41KDQRsSFwG7IeorFsFuVEOZFgMMTQlp7TjAgdQlorS1hNzZ6Uw/0uphs1dbiwqd1bk/BetterMCServer.zip"
+      GENERIC_PACK: "https://download1512.mediafire.com/052e62cl75fg8WCQMA-8XhGCs_Bgp8FpWgEHgMHEFsNVk_Mp17tORnK2o0LJea_2PBedtOTX-FoJJtHolPF1Szikyv5H/0uphs1dbiwqd1bk/BetterMCServer.zip"
     volumes:
       - mc:/data
     tty: true
