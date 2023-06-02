@@ -12,7 +12,7 @@ services:
       TYPE: FORGE
       FORGEVERSION: 36.2.39
       VERSION: 1.16.5
-      OPS: "LuisGamer02031, ShadyGamer, Detectov"
+      OPS: "LuisGamer02031, ShadyGamer"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       SERVER_NAME: "Los Panas"
       MEMORY: 20G
