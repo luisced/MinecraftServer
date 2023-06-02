@@ -70,6 +70,6 @@ services:
       - prometheus
 
 volumes:
-  mc-data: {}
+  mc: {}
   prometheus-tsdb: {}
   grafana-lib: {}
