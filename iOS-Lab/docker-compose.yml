@@ -34,14 +34,14 @@ services:
     tty: true
     stdin_open: true
     restart: unless-stopped
-  # monitor:
-  #   image: itzg/mc-monitor
-  #   command: export-for-prometheus
-  #   environment:
-  #     EXPORT_SERVERS: mc
-  #     DEBUG: "true"
-  #   depends_on:
-  #     - mc
+  monitor:
+    image: itzg/mc-monitor
+    command: export-for-prometheus
+    environment:
+      EXPORT_SERVERS: mc
+      DEBUG: "true"
+    depends_on:
+      - mc
   # cadvisor:
   #   image: gcr.io/cadvisor/cadvisor
   #   ports:
