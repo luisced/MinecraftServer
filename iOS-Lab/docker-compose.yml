@@ -12,7 +12,7 @@ services:
       TYPE: FORGE
       FORGEVERSION: 36.2.39
       VERSION: 1.16.5
-      OPS: "LuisGamer02031, ShadyGamer"
+      OPS: "LuisCed02031, ShadyGamer"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       SERVER_NAME: "iOS-Lab"
       MEMORY: 20G
@@ -34,9 +34,6 @@ services:
     tty: true
     stdin_open: true
     restart: unless-stopped
-
-
-
 
 volumes:
   mc: {}
