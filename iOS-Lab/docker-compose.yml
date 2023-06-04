@@ -1,7 +1,7 @@
 version: "3.4"
 
 services:
-  minecraft:
+  minecraft-server:
     image: itzg/minecraft-server:java8
     ports:
       - 25565:25565/tcp
@@ -34,22 +34,36 @@ services:
     tty: true
     stdin_open: true
     restart: unless-stopped
-  backups:
-    image: itzg/mc-backup
+  monitor:
+    container_name: monitor
+    image: itzg/mc-monitor
+    command: export-for-prometheus
     environment:
-      BACKUP_INTERVAL: "1h"
-      RCON_HOST: mc
-      PRE_BACKUP_SCRIPT: |
-        echo "Before backup!"
-        echo "Also before backup from $$RCON_HOST to $$DEST_DIR"
-      POST_BACKUP_SCRIPT_FILE: /post-backup.sh
+      EXPORT_SERVERS: minecraft-server
+      DEBUG: "true"
+    depends_on:
+      - minecraft-server
+  prometheus:
+    image: prom/prometheus
     volumes:
-      # mount the same volume used by server, but read-only
-      - mc:/data:ro
-      # use a host attached directory so that it in turn can be backed up
-      # to external/cloud storage
-      - ./mc-backups:/backups
-      - ./post-backup.sh:/post-backup.sh:ro
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-tsdb:/prometheus
+    depends_on:
+      - monitor
+  grafana:
+    image: grafana/grafana-oss:${GRAFANA_VERSION:-8.3.3}
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-lib:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./dashboards:/etc/grafana/dashboards
+    depends_on:
+      - prometheus
+
+
 
 volumes:
   mc: {}
+  prometheus-tsdb: {}
+  grafana-lib: {}
