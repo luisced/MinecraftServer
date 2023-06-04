@@ -34,36 +34,9 @@ services:
     tty: true
     stdin_open: true
     restart: unless-stopped
-  monitor:
-    container_name: monitor
-    image: itzg/mc-monitor
-    command: export-for-prometheus
-    environment:
-      EXPORT_SERVERS: minecraft-server
-      DEBUG: "true"
-    depends_on:
-      - minecraft-server
-  prometheus:
-    image: prom/prometheus
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
-      - prometheus-tsdb:/prometheus
-    depends_on:
-      - monitor
-  grafana:
-    image: grafana/grafana-oss:${GRAFANA_VERSION:-8.3.3}
-    ports:
-      - "3000:3000"
-    volumes:
-      - grafana-lib:/var/lib/grafana
-      - ./grafana/provisioning:/etc/grafana/provisioning
-      - ./dashboards:/etc/grafana/dashboards
-    depends_on:
-      - prometheus
+
 
 
 
 volumes:
   mc: {}
-  prometheus-tsdb: {}
-  grafana-lib: {}
