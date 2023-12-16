@@ -1,7 +1,7 @@
 version: "3.4"
 
 services:
-  minecraft:
+  minecraft-server:
     image: itzg/minecraft-server:java8
     ports:
       - 25565:25565/tcp
@@ -9,12 +9,11 @@ services:
     container_name: minecraft-server
     environment:
       EULA: "TRUE"
-      TYPE: FORGE
-      FORGEVERSION: 36.2.39
+      TYPE: FABRIC # Changed to FABRIC to support mods like lithium
       VERSION: 1.16.5
-      OPS: "LuisGamer02031, ShadyGamer"
+      OPS: "LuisCed02031, ShadyGamer, Papoi"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
-      SERVER_NAME: "Los Panas"
+      SERVER_NAME: "Jose Pablo Survival"
       MEMORY: 20G
       MODE: "SURVIVAL"
       ONLINE_MODE: "TRUE"
@@ -24,32 +23,24 @@ services:
       ALLOW_NETHER: "TRUE"
       OVERRIDE_ICON: "TRUE"
       MAX_PLAYERS: 50
-      SEED: 3227028068011494400
       REMOVE_OLD_MODS: "FALSE"
-      ICON: "https://picandocodigo.net/wp-content/uploads/2008/03/tux.3d.jpg"
-      MOTD: "§x§d§f§5§d§0§6§nW§x§e§0§5§a§0§f§ne§x§e§1§5§6§1§8§nl§x§e§2§5§3§2§1§nc§x§e§4§5§0§2§a§no§x§e§5§4§c§3§2§nm§x§e§6§4§9§3§b§ne§x§e§7§4§6§4§4§n §x§e§8§4§2§4§d§nt§x§e§9§3§f§5§6§no§x§e§a§3§c§5§f§n §x§e§c§3§8§6§8§nL§x§e§d§3§5§7§1§no§x§e§e§3§2§7§a§ns§x§e§f§2§f§8§3§n §x§f§0§2§b§8§b§nP§x§f§1§2§8§9§4§na§x§f§2§2§5§9§d§nn§x§f§4§2§1§a§6§na§x§f§5§1§e§a§f§ns§x§f§6§1§b§b§8§n §x§f§7§1§7§c§1§nS§x§f§8§1§4§c§a§ne§x§f§9§1§1§d§3§nr§x§f§a§0§d§d§b§nv§x§f§c§0§a§e§4§ne§x§f§d§0§7§e§d§nr§x§f§e§0§3§f§6§n!"
-      GENERIC_PACK: "https://www.dropbox.com/s/cxggc0fvpow0hiw/BetterMCServer.zip?dl=1"
+      ICON: "https://avatars.githubusercontent.com/u/92172089?s=400&u=4019840738f526b24cf5f7b7670301ec38890900&v=4"
+      MOTD: "\\u00a7d\\u00a7l\\u00a7nWELCOME TO iOS-LAB SERVER!\\u00a7r"
+      VIEW_DISTANCE: "5"
+      CURSEFORGE_FILES: |
+        medieval-mc-fabric-mmc1
+        spark
+        artifacts
+        lithium
+        fabric-chunk-pregenerator
+        simple-voice-chat
+        lazydfu
+      CF_API_KEY: "your-curseforge-api-key" # Replace with your actual API key
     volumes:
       - mc:/data
     tty: true
     stdin_open: true
     restart: unless-stopped
-  backups:
-    image: itzg/mc-backup
-    environment:
-      BACKUP_INTERVAL: "1h"
-      RCON_HOST: mc
-      PRE_BACKUP_SCRIPT: |
-        echo "Before backup!"
-        echo "Also before backup from $$RCON_HOST to $$DEST_DIR"
-      POST_BACKUP_SCRIPT_FILE: /post-backup.sh
-    volumes:
-      # mount the same volume used by server, but read-only
-      - mc:/data:ro
-      # use a host attached directory so that it in turn can be backed up
-      # to external/cloud storage
-      - ./mc-backups:/backups
-      - ./post-backup.sh:/post-backup.sh:ro
 
 volumes:
   mc: {}
