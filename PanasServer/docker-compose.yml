@@ -1,11 +1,21 @@
 version: "3.4"
 
 services:
+  modpack-service:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    volumes:
+      - ./modpack.zip:/usr/share/nginx/html/modpack.zip
+    networks:
+      - minecraft-network
+    container_name: modpack-service
+
   minecraft-server:
     image: itzg/minecraft-server:java8
     ports:
-      - 25565:25565/tcp
-      - 25565:25565/udp
+      - "25565:25565/tcp"
+      - "25565:25565/udp"
     container_name: minecraft-server
     environment:
       EULA: "TRUE"
@@ -27,20 +37,18 @@ services:
       ICON: "https://avatars.githubusercontent.com/u/92172089?s=400&u=4019840738f526b24cf5f7b7670301ec38890900&v=4"
       MOTD: "\\u00a7d\\u00a7l\\u00a7nWELCOME TO iOS-LAB SERVER!\\u00a7r"
       VIEW_DISTANCE: "5"
-      CURSEFORGE_FILES: |
-        medieval-mc-fabric-mmc1
-        spark
-        artifacts
-        lithium
-        fabric-chunk-pregenerator
-        simple-voice-chat
-        lazydfu
-      CF_API_KEY: "your-curseforge-api-key" # Replace with your actual API key
+      GENERIC_PACK: "http://modpack-service:80/modpack.zip"
     volumes:
       - mc:/data
+    networks:
+      - minecraft-network
     tty: true
     stdin_open: true
     restart: unless-stopped
 
 volumes:
-  mc: {}
+  mc: { }
+
+networks:
+  minecraft-network:
+    driver: bridge
