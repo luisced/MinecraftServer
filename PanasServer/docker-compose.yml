@@ -21,7 +21,7 @@ services:
       EULA: "TRUE"
       TYPE: FABRIC # Changed to FABRIC to support mods like lithium
       FABRIC_LAUNCHER_VERSION: 0.11.2
-      FABRIC_LOADER_VERSION: 0.12
+      FABRIC_LOADER_VERSION: 0.14.25
       VERSION: 1.19.2
       OPS: "LuisCed02031, ShadyGamer, Papoi"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
