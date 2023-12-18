@@ -20,7 +20,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: FABRIC # Changed to FABRIC to support mods like lithium
-      VERSION: 1.16.5
+      VERSION: 1.19.2
       OPS: "LuisCed02031, ShadyGamer, Papoi"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       SERVER_NAME: "Jose Pablo Survival"
