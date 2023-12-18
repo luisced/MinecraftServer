@@ -12,7 +12,7 @@ services:
     container_name: modpack-service
 
   minecraft-server:
-    image: itzg/minecraft-server:java8
+    image: itzg/minecraft-server
     ports:
       - "25565:25565/tcp"
       - "25565:25565/udp"
