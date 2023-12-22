@@ -38,8 +38,8 @@ services:
       OVERRIDE_ICON: "TRUE"
       MAX_PLAYERS: 50
       REMOVE_OLD_MODS: "FALSE"
-      ICON: "https://avatars.githubusercontent.com/u/92172089?s=400&u=4019840738f526b24cf5f7b7670301ec38890900&v=4"
-      MOTD: "\\u00a7d\\u00a7l\\u00a7nWELCOME TO iOS-LAB SERVER!\\u00a7r"
+      ICON: "https://i.ytimg.com/vi/ldN9fNhZcsQ/hqdefault.jpg"
+      MOTD: "\\u00a7d\\u00a7l\\u00a7nWELCOME TO LOS PANAS!\\u00a7r"
       VIEW_DISTANCE: "5"
       GENERIC_PACK: "http://modpack-service:80/modpack.zip"
     volumes:
